@@ -1,0 +1,11 @@
+OBJECTS=MMSE.o
+EXE_NAME=MMSE$(EXE_EXT)
+
+all: $(EXE_NAME)
+
+$(EXE_NAME): MMSE.o
+
+MMSE.o: MMSE.c
+
+clean:
+	rm -f $(EXE_NAME) $(OBJECTS)
