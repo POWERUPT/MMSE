@@ -9,7 +9,7 @@ int main () {
     unsigned int magic;
     unsigned int a = 0x01;
     unsigned int b = 0x00;
-    unsigned int value[2];
+    //unsigned int value[2];
 
     printf("Input save name\n");
     scanf("%s",filename);
@@ -44,12 +44,12 @@ int main () {
         printf("###########################\n");
         printf("# Meegah Meme save editor #\n");
         printf("###########################\n\n");
-        printf("(1) BUMBMEM state\n");
-        printf("(2) GLUTZMEM state\n");
-        printf("(3) KUTMEM state\n");
-        printf("(4) LECKMEM state\n");
-        printf("(5) ICMEM state\n");
-        printf("(6) FARMEM state\n");
+        printf("(1) or (11) BUMBMEM state\n");
+        printf("(2) or (22) GLUTZMEM state\n");
+        printf("(3) or (33) KUTMEM state\n");
+        printf("(4) or (44) LECKMEM state\n");
+        printf("(5) or (55) ICMEM state\n");
+        printf("(6) or (66) FARMEM state\n");
         //printf("(7) Set number of ROBATMESTRZ\n");
         printf("(8) Exit\n\n");
         scanf(" %d", &choice);
