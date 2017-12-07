@@ -9,7 +9,7 @@ int main () {
     unsigned int magic;
     unsigned int a = 0x01;
     unsigned int b = 0x00;
-    //unsigned int value[2];
+    //unsigned int value;
 
     printf("Input save name\n");
     scanf("%s",filename);
@@ -27,7 +27,7 @@ int main () {
         fseek(f, 0x00, SEEK_SET);
         fread(&magic, sizeof(unsigned int), 1, f);
 
-        if (magic != 541281859 ) {    // I know this is bad
+        if (magic != 0x20434e43 ) {
             printf("Invalid header!\n");
             return(2);
         }
@@ -41,17 +41,23 @@ int main () {
             return(3);
         }
 
-        printf("###########################\n");
-        printf("# Meegah Meme save editor #\n");
-        printf("###########################\n\n");
-        printf("(1) or (11) BUMBMEM state\n");
-        printf("(2) or (22) GLUTZMEM state\n");
-        printf("(3) or (33) KUTMEM state\n");
-        printf("(4) or (44) LECKMEM state\n");
-        printf("(5) or (55) ICMEM state\n");
-        printf("(6) or (66) FARMEM state\n");
-        //printf("(7) Set number of ROBATMESTRZ\n");
-        printf("(8) Exit\n\n");
+        printf("   ######################################\n");
+        printf("   #                                    #\n");
+        printf("   #                MMSE                #\n");
+        printf("   #       Meegah Mem save editor       #\n");
+        printf("   #                v1.1                #\n");    // Laugh about this horrible thing later
+        printf("   #                                    #\n");
+        printf("   ######################################\n\n\n");
+        printf("  (1) BUMBMEM is dead (11) BUMBMEM is alive\n");
+        printf("  (2) GLUTZMEM is dead (22) GLUTZMEM is alive\n");
+        printf("  (3) KUTMEM is dead (33) KUTMEM is alive\n");
+        printf("  (4) LECKMEM is dead (44) LECKMEM is alive\n");
+        printf("  (5) ICMEM is dead (55) ICMEM is alive\n");
+        printf("  (6) FARMEM is dead (66) FARMEM is alive\n");
+        //printf("  (7) Set number of ROBATMESTRZ\n");
+        printf("  (8) Exit\n\n");
+        printf("#####################################################\n\n");
+        printf("Choice: ");
         scanf(" %d", &choice);
 
         switch(choice) {
@@ -111,7 +117,7 @@ int main () {
         //switch(choice) {
         //case(7):
             //printf("Input value\n");
-            //scanf("%x",value);        // Undesired effects if not hex
+            //scanf("%x", &value);        // Undesired effects if not hex
             //fseek(f, 0x12, SEEK_SET );
             //fwrite(&value,sizeof(unsigned int),1,f);
             //printf("Value set\n\n");
@@ -121,6 +127,7 @@ int main () {
 
         switch(choice) {
         case(8):
+            fclose(f);
             exit(0);
             break;
         }
