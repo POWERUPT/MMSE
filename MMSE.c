@@ -1,15 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "MMSE.h"
 
 int main () {
-    int choice;
-
-    char filename[255];
-    int fsize;
-    unsigned int magic;
-    unsigned int a = 0x01;
-    unsigned int b = 0x00;
-    //unsigned int value;
 
     printf("Input save name\n");
     scanf("%s",filename);
@@ -114,16 +107,16 @@ int main () {
             break;
         }
 
-        //switch(choice) {
-        //case(7):
-            //printf("Input value\n");
-            //scanf("%x", &value);        // Undesired effects if not hex
-            //fseek(f, 0x12, SEEK_SET );
-            //fwrite(&value,sizeof(unsigned int),1,f);
-            //printf("Value set\n\n");
-            //fclose(f);
-            //break;
-        //}
+        /*switch(choice) {
+        case(7):
+            printf("Input value\n");
+            scanf("%x", &value);        // Undesired effects if not hex
+            fseek(f, 0x12, SEEK_SET );
+            fwrite(&value,sizeof(unsigned int),1,f);
+            printf("Value set\n\n");
+            fclose(f);
+            break;
+        }*/
 
         switch(choice) {
         case(8):

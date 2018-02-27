@@ -5,7 +5,7 @@ all: $(EXE_NAME)
 
 $(EXE_NAME): MMSE.o
 
-MMSE.o: MMSE.c
+MMSE.o: MMSE.c MMSE.h
 
 clean:
 	rm -f $(EXE_NAME) $(OBJECTS)
